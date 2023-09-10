@@ -1,0 +1,25 @@
+<!-- res/layout/passenger_entry.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- Passenger Name TextView -->
+    <TextView
+        android:id="@+id/friendlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <!-- Phone Number TextView -->
+    <TextView
+        android:id="@+id/customamount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:gravity="right" />
+</LinearLayout>

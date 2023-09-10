@@ -1,0 +1,310 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CreateRides">
+
+    <ImageView
+        android:id="@+id/createride_bg"
+        android:layout_width="match_parent"
+        android:layout_height="284dp"
+        android:layout_gravity="top"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/carpool_bg" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rides_info"
+        android:layout_width="match_parent"
+        android:layout_height="490dp"
+        android:layout_weight="1"
+        android:background="@drawable/carpool_background"
+        app:layout_constraintTop_toBottomOf="@+id/createride_bg">
+
+        <LinearLayout
+            android:id="@+id/lldatentime"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.10">
+
+            <!-- Left Layout -->
+            <LinearLayout
+                android:id="@+id/llleftnright"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editDateLeft"
+                    android:layout_width="156dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/custom_edittext"
+                    android:drawableLeft="@drawable/ic_date"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:hint="Enter Date"
+                    android:paddingStart="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="8dp"
+                    android:textColor="@color/gray"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+            <!-- Right Layout -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editTimeRight"
+                    android:layout_width="157dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/custom_edittext"
+                    android:drawableLeft="@drawable/ic_time"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:hint="Enter Time"
+                    android:paddingStart="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="8dp"
+                    android:textColor="@color/gray"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintloc"
+            android:layout_width="match_parent"
+            android:layout_height="317dp"
+            android:layout_weight="1"
+            android:background="@drawable/carpool_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lldatentime"
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="-3dp">
+
+            <LinearLayout
+                android:id="@+id/llstartingloc"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="80dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lldatentime"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:ignore="NotSibling">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="8dp"
+                    android:src="@drawable/ic_loc" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/startingloc"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/edittext_line"
+                    android:drawablePadding="4dp"
+                    android:gravity="center_vertical"
+                    android:hint="Where from?"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/separateline2"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="@+id/llstartingloc"
+                app:layout_constraintStart_toStartOf="@+id/llstartingloc"
+                app:layout_constraintTop_toBottomOf="@+id/llstartingloc" />
+
+            <LinearLayout
+                android:id="@+id/lldestination"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="80dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llstartingloc"
+                tools:ignore="NotSibling">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="8dp"
+                    android:src="@drawable/ic_loc" />
+
+                <EditText
+                    android:id="@+id/destination"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/edittext_line"
+                    android:drawablePadding="4dp"
+                    android:gravity="center_vertical"
+                    android:hint="Where to?"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/separateline3"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="@+id/lldestination"
+                app:layout_constraintStart_toStartOf="@+id/lldestination"
+                app:layout_constraintTop_toBottomOf="@+id/lldestination" />
+
+            <LinearLayout
+                android:id="@+id/llprice"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="80dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lldestination"
+                tools:ignore="NotSibling">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="8dp"
+                    android:src="@drawable/ic_price" />
+
+                <EditText
+                    android:id="@+id/price"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/edittext_line"
+                    android:drawablePadding="4dp"
+                    android:gravity="center_vertical"
+                    android:hint="Price"
+                    android:inputType="numberDecimal"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/separateline4"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="@+id/llprice"
+                app:layout_constraintStart_toStartOf="@+id/llprice"
+                app:layout_constraintTop_toBottomOf="@+id/llprice" />
+
+            <LinearLayout
+                android:id="@+id/llrangenpax"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="80dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llprice"
+                tools:ignore="NotSibling">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="8dp"
+                    android:src="@drawable/ic_pax" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <EditText
+                        android:id="@+id/pax"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/edittext_line"
+                        android:drawablePadding="4dp"
+                        android:gravity="center_vertical"
+                        android:hint="Seats"
+                        android:inputType="numberDecimal"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/DriverInfoSaveButton"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/rounded_button"
+                android:gravity="center"
+                android:text="Upload Ride"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.424"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llrangenpax"
+                app:layout_constraintVertical_bias="0.51" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

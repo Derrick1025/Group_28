@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/getstart_background"
+    android:orientation="vertical"
+    tools:context=".EditProfile">
+
+    <TextView
+        android:id="@+id/CurrentPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:text="Current password"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <EditText
+        android:id="@+id/oldpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/input_bg"
+        android:hint="Enter your old password"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:minHeight="48dp"
+        android:padding="15dp" />
+
+    <TextView
+        android:id="@+id/tv_newPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:text="New password"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <EditText
+        android:id="@+id/newpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/input_bg"
+        android:hint="Enter your new password"
+        android:minHeight="48dp"
+        android:padding="15dp" />
+
+    <EditText
+        android:id="@+id/Confirmnewpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Confirm new password"
+        android:minHeight="48dp"
+        android:layout_gravity="center"
+        android:padding="15dp"
+        android:background="@drawable/input_bg"
+        android:layout_margin="16dp"/>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="261dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:text="Save"
+        android:layout_margin="16dp"
+        android:layout_gravity="center"/>
+
+
+</LinearLayout>

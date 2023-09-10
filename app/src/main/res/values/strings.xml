@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">grp_nav</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="google_map_api">AIzaSyCPOJxI7w0nFLleuo1GsCcFMKDF92gXW3g</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="supabasekey">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5qbnpnYWRlYnZsdmV4c3RieG51Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTI3NzE4MDgsImV4cCI6MjAwODM0NzgwOH0.se1AJexM57HRwHiIYJP5GhhAwBQJnpPiramBU-QyuHM</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyCPOJxI7w0nFLleuo1GsCcFMKDF92gXW3g</string>
+</resources>
+
+

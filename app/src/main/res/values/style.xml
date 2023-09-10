@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- App theme attributes -->
+    </style>
+
+    <style name="DatePicker_Style" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/blue</item> <!-- Change to your desired color -->
+        <!-- Other attributes for the DatePickerDialog style -->
+    </style>
+
+    <style name="TimePicker_Style" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/blue</item> <!-- Change to your desired color -->
+        <!-- Other attributes for the TimePickerDialog style -->
+    </style>
+
+    <style name="AlertDialogTitleStyle">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Subhead</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">start</item>
+    </style>
+
+
+</resources>
